@@ -7,6 +7,8 @@ Features:
 - RabbitMQ broker
 - Stripe payment system
 - Monitoring with Flower
+- Admin panel
+- CSV export
 
 ## Database structure
 
