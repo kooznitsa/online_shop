@@ -1,6 +1,9 @@
 import os
+from typing import Union
 
 from django.shortcuts import render, redirect, aget_object_or_404
+from django.core.handlers.asgi import ASGIRequest
+from django.http import HttpResponse, HttpResponseRedirect
 from django.views import View
 
 from shop.models import Product
@@ -9,9 +12,11 @@ from .forms import CartAddProductForm
 
 os.environ['DJANGO_ALLOW_ASYNC_UNSAFE'] = 'true'
 
+RedirectOrResponse = Union[HttpResponseRedirect, HttpResponse]
+
 
 class CartDetail(View):
-    async def post(self, request, product_id: int, method: str):
+    async def post(self, request: ASGIRequest, product_id: int, method: str) -> RedirectOrResponse:
         cart = Cart(request)
         product = await aget_object_or_404(Product.objects.prefetch_related('category'), id=product_id)
         
@@ -27,7 +32,7 @@ class CartDetail(View):
         
         return redirect('cart:cart_detail')
    
-    async def get(self, request):
+    async def get(self, request: ASGIRequest) -> RedirectOrResponse:
         cart = Cart(request)
 
         for item in cart:

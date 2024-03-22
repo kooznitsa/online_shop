@@ -1,4 +1,12 @@
-# Weasleys' Wizard Wheezes Online Shop
+# Online Shop
+
+Features:
+
+- Asynchronous Django (ASGI)
+- Celery tasks
+- RabbitMQ broker
+- Stripe payment system
+- Monitoring with Flower
 
 ## Database structure
 
@@ -26,7 +34,7 @@ Production mode: ```poetry run python -m gunicorn backend.asgi:application -k uv
 
 ```bash
 cd backend
-poetry run python manage.py makemigrations --settings=backend.settings.local
+python manage.py makemigrations --settings=backend.settings.local
 python manage.py migrate --settings=backend.settings.local
 ```
 
@@ -47,9 +55,37 @@ docker run -it --rm --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:managem
 
 ```bash
 cd backend
-celery -A backend worker --pool=solo -l info
+python -m celery -A backend worker --pool=solo -l info
 ```
 
 ## Monitoring
 
 Flower: http://localhost:5555/
+
+## Stripe payment system
+
+Test data:
+
+- Card number: 4242 4242 4242 4242
+- Expiration date: 12/29
+- CVC: 123
+- Country: United States 10001
+
+Links:
+
+- [Stripe test data](https://docs.stripe.com/testing)
+- [Stripe dashboard](https://dashboard.stripe.com/test/payments)
+- [Stripe webhooks](https://dashboard.stripe.com/test/webhooks)
+
+Set webhook locally:
+
+- Download stripe_1.19.2_windows_x86_64.zip from [GitHub](https://github.com/stripe/stripe-cli/releases/tag/v1.19.2)
+- Add stripe.exe to your venv/scripts
+- ```stripe login --api-key sk_test_...```
+- ```stripe listen --forward-to localhost:8000/payment/webhook/```
+
+Set webhook with Docker (not tested):
+
+- Install Stripe CLI: ```docker run --rm -it stripe/stripe-cli:latest```
+- ```docker run -it stripe/stripe-cli login```
+- ```docker run -it stripe/stripe-cli listen --api-key ${STRIPE_SECRET_KEY} --forward-to backend:8000/payment/webhook/```

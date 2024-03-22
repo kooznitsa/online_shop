@@ -1,12 +1,18 @@
+from typing import Union
+
+from django.core.handlers.asgi import ASGIRequest
+from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, aget_object_or_404
 from django.views import View
 
 from cart.forms import CartAddProductForm
 from .models import Category, Product
 
+RedirectOrResponse = Union[HttpResponseRedirect, HttpResponse]
+
 
 class ProductList(View):
-    async def get(self, request, category_slug: str | None = None):
+    async def get(self, request: ASGIRequest, category_slug: str | None = None) -> RedirectOrResponse:
         category = None
         categories = [category async for category in Category.objects.all()]
         products = [product async for product in Product.objects.filter(available=True)]
@@ -25,7 +31,7 @@ class ProductList(View):
 
 
 class ProductDetail(View):
-    async def get(self, request, id: int, slug: str):
+    async def get(self, request: ASGIRequest, id: int, slug: str) -> RedirectOrResponse:
         product = await aget_object_or_404(
             Product.objects.prefetch_related('category'), 
             id=id, slug=slug, available=True,

@@ -1,13 +1,14 @@
-from asgiref.sync import sync_to_async
 from decimal import Decimal
+from typing import Generator
 
 from django.conf import settings
+from django.core.handlers.asgi import ASGIRequest
 
 from shop.models import Product
 
 
 class Cart:
-    def __init__(self, request):
+    def __init__(self, request: ASGIRequest) -> None:
         """
         Initialize the cart.
         """
@@ -20,7 +21,7 @@ class Cart:
         
         self.cart = cart
 
-    async def add(self, product, quantity=1, override_quantity=False):
+    async def add(self, product: Product, quantity: int = 1, override_quantity: bool = False) -> None:
         """
         Add a product to the cart or update its quantity.
         """
@@ -35,13 +36,13 @@ class Cart:
         
         await self.save()
         
-    async def save(self):
+    async def save(self) -> None:
         """
         Mark the session as "modified" to make sure it gets saved.
         """
         self.session.modified = True
 
-    async def remove(self, product):
+    async def remove(self, product: Product) -> None:
         """
         Remove a product from the cart.
         """
@@ -53,7 +54,7 @@ class Cart:
         await self.save()
 
 
-    def __iter__(self):
+    def __iter__(self) -> Generator:
         """
         Iterate over the items in the cart and get the products
         from the database.
@@ -71,17 +72,17 @@ class Cart:
             item['total_price'] = item['price'] * item['quantity']
             yield item
 
-    def __len__(self):
+    def __len__(self) -> int:
         """
         Count all items in the cart.
         """
         return sum(item['quantity'] for item in self.cart.values())
     
-    def get_total_price(self):
+    def get_total_price(self) -> float:
         return sum(Decimal(item['price']) * item['quantity'] for item in self.cart.values())
 
 
-    async def clear(self):
+    async def clear(self) -> None:
         # remove cart from session
         del self.session[settings.CART_SESSION_ID]
         await self.save()

@@ -15,10 +15,10 @@ class Category(models.Model):
         verbose_name = 'category'
         verbose_name_plural = 'categories'
     
-    def __str__(self):
+    def __str__(self) -> str:
         return self.name
 
-    def get_absolute_url(self):
+    def get_absolute_url(self) -> str:
         return reverse('shop:product_list_by_category', args=[self.slug])
 
 
@@ -43,8 +43,8 @@ class Product(models.Model):
         ]
         unique_together = ('category', 'name',)
     
-    def __str__(self):
+    def __str__(self) -> str:
         return self.name
     
-    def get_absolute_url(self):
+    def get_absolute_url(self) -> str:
         return reverse('shop:product_detail', args=[self.id, self.slug])
