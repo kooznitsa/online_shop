@@ -26,6 +26,13 @@ def order_detail(obj: Order) -> str:
     return mark_safe(f'<a href="{url}">View</a>')
 
 
+def order_pdf(obj: Order) -> str:
+    url = reverse('orders:admin_order_pdf', args=[obj.id])
+    return mark_safe(f'<a href="{url}">PDF</a>')
+
+order_pdf.short_description = 'Invoice'
+
+
 class Echo:
     @staticmethod
     def write(value: str) -> str:
@@ -62,7 +69,7 @@ class OrderItemInline(admin.TabularInline):
 class OrderAdmin(admin.ModelAdmin):
     list_display = [
         'id', 'first_name', 'last_name', 'email', 'address', 'postal_code', 
-        'city', 'paid', order_payment, 'created', 'updated', order_detail,
+        'city', 'paid', order_payment, 'created', 'updated', order_detail, order_pdf,
     ]
     list_filter = ['paid', 'created', 'updated']
     inlines = [OrderItemInline]

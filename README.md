@@ -1,14 +1,19 @@
 # Online Shop
 
-Features:
+Tech features:
 
 - Asynchronous Django (ASGI)
 - Celery tasks
 - RabbitMQ broker
 - Stripe payment system
 - Monitoring with Flower
+
+Online shop features:
+
 - Admin panel
 - CSV export
+- PDF export
+- Notifications via email
 
 ## Database structure
 

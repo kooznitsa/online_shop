@@ -8,6 +8,7 @@ from django.views.decorators.csrf import csrf_exempt
 import stripe
 
 from orders.models import Order
+from .tasks import payment_completed
 
 error_logger = logging.getLogger('error_logger')
 info_logger = logging.getLogger('info_logger')
@@ -52,6 +53,9 @@ class StripeWebhook(View):
                 order.stripe_id = session.payment_intent
 
                 order.save()
+                
+                # send email notification
+                payment_completed.delay(order.id)
         
         return HttpResponse(status=200)
     

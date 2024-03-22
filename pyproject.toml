@@ -18,6 +18,7 @@ celery = "^5.3.6"
 flower = "^2.0.1"
 stripe = "^8.7.0"
 django-cors-headers = "^4.3.1"
+xhtml2pdf = "^0.2.15"
 
 
 [build-system]
