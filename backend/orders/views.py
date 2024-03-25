@@ -6,7 +6,7 @@ from django.contrib.staticfiles import finders
 from django.core.handlers.asgi import ASGIRequest
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, redirect, aget_object_or_404
-from django.template.loader import get_template, render_to_string
+from django.template.loader import render_to_string
 from django.urls import reverse
 from django.utils.decorators import method_decorator
 from django.views import View
@@ -26,7 +26,13 @@ class OrderDetail(View):
         form = OrderCreateForm(request.POST)
     
         if form.is_valid():
-            order = form.save()
+            order = form.save(commit=False)
+
+            if cart.coupon:
+                order.coupon = cart.coupon
+                order.discount = cart.coupon.discount
+            
+            order.save()
         
             for item in cart:
                 OrderItem.objects.create(

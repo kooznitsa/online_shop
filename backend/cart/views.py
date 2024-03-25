@@ -6,6 +6,7 @@ from django.core.handlers.asgi import ASGIRequest
 from django.http import HttpResponse, HttpResponseRedirect
 from django.views import View
 
+from coupons.forms import CouponApplyForm
 from shop.models import Product
 from .cart import Cart
 from .forms import CartAddProductForm
@@ -38,7 +39,12 @@ class CartDetail(View):
         for item in cart:
             item['update_quantity_form'] = CartAddProductForm(initial={'quantity': item['quantity'], 'override': True})
 
-        context = {'cart': cart}
+        coupon_apply_form = CouponApplyForm()
+
+        context = {
+            'cart': cart,
+            'coupon_apply_form': coupon_apply_form,
+        }
 
         return render(request, 'cart/detail.html', context)
     
