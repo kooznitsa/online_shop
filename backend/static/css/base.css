@@ -12,22 +12,42 @@ h1, h2, h3, h4, h5 , h6 {
 
 a {
     text-decoration:none;
-    color:#5993bb;
+    color:#4B0082;
 }
 
 a:hover {
-    color:#77b6e2;
+    color:#9b3c96;
 }
 
 a.button, input[type="submit"] {
     color:#fff;
-    background:#5993bb;
+    background:#4B0082;
     border-radius:4px;
     padding:10px 20px;
     font-size:14px;
     border:0;
+    cursor:pointer;
 }
 
+.horizontal-form {
+    display: flex;
+}
+
+.resize {
+    overflow: hidden;
+    resize: horizontal;
+    display: inline-block;
+}
+
+.resize input {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.horizontal-form input[type="submit"] {
+    margin-left: 10px;
+}
+  
 a.button.light {
     color:#666;
     background:#ededed;
@@ -63,7 +83,7 @@ tbody tr.subtotal {
 }
 
 thead th, tbody tr.total {
-    background:#5993bb;
+    background:#9b3c96;
     color:#fff;
     font-weight:bold;
 }
@@ -80,6 +100,24 @@ tbody td.num {
     text-align:right;
 }
 
+input {
+    outline: none;
+    user-select: none;
+}
+
+input {
+    border: 1px solid #a4a4a4;
+    padding: 15px 20px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    background: #f8f8ff;
+}
+
+input:active, input:hover, input:focus {
+    box-shadow: 2px 2px 5px 0px rgba(128,128,128,.7);
+    transition: box-shadow .3s linear;
+}
+
 td input[type="submit"] {
     font-size:12px;
     padding:4px 10px;
@@ -93,6 +131,10 @@ form p label, form p input {
 form p label {
     font-size:14px;
     padding-bottom:4px;
+}
+
+textarea:focus, input:focus{
+    outline: none;
 }
 
 form p input {
@@ -135,11 +177,24 @@ ul.errorlist {
     color:#333;
     font-size:22px;
     margin-right:10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#header .logo p {
+    padding-left: 10px;
 }
 
 #subheader .cart {
-    float:right;
-    padding-top:4px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: row;
+}
+
+.cart-items {
+    padding-left: 10px;
 }
 
 #content {
@@ -148,7 +203,7 @@ ul.errorlist {
 }
 
 #sidebar {
-    width:220px;
+    width:200px;
     padding:30px 20px 0 0;
     float:left;
 }
@@ -169,7 +224,7 @@ ul.errorlist {
 }
 
 #sidebar ul li.selected {
-    background:#5993bb;
+    background:#9b3c96;
     border-radius:4px;
 }
 
@@ -179,17 +234,48 @@ ul.errorlist {
 
 #main {
     float:left;
-    width: 96%;
+    width: 85%;
     margin-right:-220px;
     overflow:hidden;
 }
 
-.product-list .item {
-    width:25%;
-    padding:10px 20px 10px 0;
+#main, #content {
+    margin-bottom: 170px;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin: 0 0 80px; /* bottom = footer height */
+}
+
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 80px;
+    width: 86.2%;
+    background:#9b3c96;
+    padding: 20px 100px;
+}
+
+.product-list {
+    padding-top: 20px;
+    column-count: 3;
+    column-gap: 1em;
     float:left;
+  }
+
+.product-list .item {
+    padding:10px 20px 10px 0;
     text-align:center;
     line-height:1.2;
+    -webkit-column-break-inside: avoid;
+    break-inside: avoid;
+    page-break-inside: avoid;
 }
 
 .product-list .item img {
@@ -231,11 +317,11 @@ ul.errorlist {
     background:#efefef;
     padding:10px 20px;
     color:#333;
-    border-bottom:4px solid #5993bb;
+    border-bottom:4px solid #9b3c96;
 }
 
 .order-info h3 {
-    color:#5993bb;
+    color:#9b3c96;
 }
 
 .order-info ul li {

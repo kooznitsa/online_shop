@@ -91,14 +91,13 @@
 {% endif %}
 
   <p>Apply a coupon:</p>
-  <form action="{% url "coupons:apply" %}" method="post">
-    {{ coupon_apply_form }}
+  <form action="{% url "coupons:apply" %}" method="post" class="horizontal-form">
+    <p class="resize">{{ coupon_apply_form }}</p>
     <input type="submit" value="Apply">
     {% csrf_token %}
   </form>
   <p class="text-right">
-    <a href="{% url "shop:product_list" %}" class="button
-    light">Continue shopping</a>
+    <a href="{% url "shop:product_list" %}" class="button light">Continue shopping</a>
     <a href="{% url "orders:order_create" %}" class="button">Checkout</a>
   </p>
 {% endblock %}

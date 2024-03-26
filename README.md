@@ -14,6 +14,7 @@ Online shop features:
 - CSV export
 - PDF export
 - Notifications via email
+- Coupon system
 
 ## Database structure
 
@@ -63,6 +64,21 @@ docker run -it --rm --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:managem
 ```bash
 cd backend
 python -m celery -A backend worker --pool=solo -l info
+```
+
+## Launch Redis
+
+```
+# Once:
+sudo add-apt-repository universe
+sudo apt install redis
+sudo service redis-service restart
+
+# Always:
+sudo service redis-server start
+sudo service redis-server status
+# Status: "Ready to accept connections"
+redis-cli
 ```
 
 ## Monitoring
