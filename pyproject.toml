@@ -19,6 +19,7 @@ flower = "^2.0.1"
 stripe = "^8.7.0"
 django-cors-headers = "^4.3.1"
 xhtml2pdf = "^0.2.15"
+redis = "^5.0.3"
 
 
 [build-system]

@@ -6,6 +6,8 @@ Tech features:
 - Celery tasks
 - RabbitMQ broker
 - Stripe payment system
+- Redis Storage
+- PostgreSQL database
 - Monitoring with Flower
 
 Online shop features:
@@ -15,6 +17,7 @@ Online shop features:
 - PDF export
 - Notifications via email
 - Coupon system
+- Recommender system
 
 ## Database structure
 
@@ -113,9 +116,11 @@ Set webhook with Docker (not tested):
 
 ```bash
 # Dump data
+cd backend
 python manage.py dumpdata > db_data.json --settings=backend.settings.local
 
 # Load data
+cd backend
 python manage.py loaddata db_data.json --settings=backend.settings.local
 ```
 
