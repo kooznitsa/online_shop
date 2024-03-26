@@ -81,10 +81,6 @@ sudo service redis-server status
 redis-cli
 ```
 
-## Monitoring
-
-Flower: http://localhost:5555/
-
 ## Stripe payment system
 
 Test data:
@@ -112,3 +108,17 @@ Set webhook with Docker (not tested):
 - Install Stripe CLI: ```docker run --rm -it stripe/stripe-cli:latest```
 - ```docker run -it stripe/stripe-cli login```
 - ```docker run -it stripe/stripe-cli listen --api-key ${STRIPE_SECRET_KEY} --forward-to backend:8000/payment/webhook/```
+
+## Transfer database
+
+```bash
+# Dump data
+python manage.py dumpdata > db_data.json --settings=backend.settings.local
+
+# Load data
+python manage.py loaddata db_data.json --settings=backend.settings.local
+```
+
+## Monitoring
+
+Flower: http://localhost:5555/
