@@ -263,6 +263,20 @@ zookeeper = ["kazoo (>=1.3.1)"]
 zstd = ["zstandard (==0.22.0)"]
 
 [[package]]
+name = "celery-amqp-backend"
+version = "1.1.0"
+description = "A rewrite of the original Celery AMQP result backend that supports Celery 5.0 and newer."
+optional = false
+python-versions = "*"
+files = [
+    {file = "celery-amqp-backend-1.1.0.tar.gz", hash = "sha256:0590ee17242a9d38d432257474908a514438e839dd8404fbac095f7ac61304e6"},
+    {file = "celery_amqp_backend-1.1.0-py3-none-any.whl", hash = "sha256:672f39e9f979baba7d1ab36f3b384e41135b3e9bd7f63ce21cef65e39f89853c"},
+]
+
+[package.dependencies]
+celery = ">=5.2,<6.0"
+
+[[package]]
 name = "certifi"
 version = "2024.2.2"
 description = "Python package for providing Mozilla's CA Bundle."
@@ -1895,4 +1909,4 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "bbcb04757f3341bcbeb0331abd47dc2a9737a6aed774aba284367e278d239762"
+content-hash = "d729fdbe9df85dfafd0ea407bacd696eb18affd8e7676c5d1c6d60f9a099bc0d"

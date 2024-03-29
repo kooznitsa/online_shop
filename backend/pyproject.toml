@@ -2,7 +2,7 @@
 name = "online-store"
 version = "0.1.0"
 description = ""
-authors = ["kooznitsa <jukuznetswork@gmail.com>"]
+authors = ["kooznitsa"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
@@ -20,6 +20,7 @@ stripe = "^8.7.0"
 django-cors-headers = "^4.3.1"
 xhtml2pdf = "^0.2.15"
 redis = "^5.0.3"
+celery-amqp-backend = "^1.1.0"
 
 
 [build-system]

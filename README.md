@@ -1,6 +1,6 @@
 # Online Shop
 
-Tech features:
+## Tech stack
 
 - Asynchronous Django (ASGI)
 - Celery tasks
@@ -9,8 +9,9 @@ Tech features:
 - Redis Storage
 - PostgreSQL database
 - Monitoring with Flower
+- Docker containers
 
-Online shop features:
+## Online shop features
 
 - Admin panel
 - CSV export
@@ -23,33 +24,63 @@ Online shop features:
 
 [![draw-SQL-image-export-2024-03-20.png](https://i.postimg.cc/k4yYwmkW/draw-SQL-image-export-2024-03-20.png)](https://postimg.cc/qhzGM9B7)
 
-## Collect static files
+## Launching project
+
+### General
+
+1. Create database **shop_db** with Postgres 16 and new server in PGAdmin:
+
+- Host name/address: localhost
+- Port: 5433
+- Maintenance database: postgres
+- Username: postgres
+
+2. Add **.env.prod** (with Docker Compose) or **.env.local** (without Docker Compose), and **.env.stripe** to the project's root.
+
+Generate new Django secret key:
+```python
+from django.core.management.utils import get_random_secret_key
+
+print(get_random_secret_key())
+```
+
+### With Docker Compose
+
+1. Create network: ```docker network create shop-net```
+
+2. Build Docker containers: ```docker compose up -d --build```
+
+3. To authenticate with Stripe, go to: https://dashboard.stripe.com/stripecli/confirm_auth?t=... (see Docker Desktop logs for full URL)
+
+Remove Docker containers: ```docker compose down```
+
+### Without Docker Compose
+
+#### Collect static files
 
 ```bash
 cd backend
 python manage.py collectstatic --noinput --settings=backend.settings.local
 ```
 
-## Launch project
-
-Development mode:
+#### Launch project
 
 ```bash
 cd backend
 python -m uvicorn backend.asgi:application --reload
 ```
 
-Production mode: ```poetry run python -m gunicorn backend.asgi:application -k uvicorn.workers.UvicornWorker```
-
-## Migrations
+#### Apply migrations
 
 ```bash
 cd backend
+# Make new migrations
 python manage.py makemigrations --settings=backend.settings.local
+# Apply migrations
 python manage.py migrate --settings=backend.settings.local
 ```
 
-## Lanch RabbitMQ
+#### Lanch RabbitMQ
 
 1. Start Docker Desktop.
 
@@ -62,16 +93,16 @@ docker run -it --rm --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:managem
 
 3. RabbitMQ interface is available at http://127.0.0.1:15672
 
-## Run a Celery worker
+#### Run a Celery worker
 
 ```bash
 cd backend
 python -m celery -A backend worker --pool=solo -l info
 ```
 
-## Launch Redis
+#### Launch Redis
 
-```
+```bash
 # Once:
 sudo add-apt-repository universe
 sudo apt install redis
@@ -84,7 +115,7 @@ sudo service redis-server status
 redis-cli
 ```
 
-## Stripe payment system
+#### Stripe payment system
 
 Test data:
 
@@ -106,18 +137,14 @@ Set webhook locally:
 - ```stripe login --api-key sk_test_...```
 - ```stripe listen --forward-to localhost:8000/payment/webhook/```
 
-Set webhook with Docker (not tested):
-
-- Install Stripe CLI: ```docker run --rm -it stripe/stripe-cli:latest```
-- ```docker run -it stripe/stripe-cli login```
-- ```docker run -it stripe/stripe-cli listen --api-key ${STRIPE_SECRET_KEY} --forward-to backend:8000/payment/webhook/```
-
-## Transfer database
+#### Transfer database
 
 ```bash
 # Dump data
 cd backend
-python manage.py dumpdata > db_data.json --settings=backend.settings.local
+python -Xutf8 manage.py dumpdata --natural-foreign --exclude=auth.permission --exclude=contenttypes --indent=4 --output=db_data.json --settings=backend.settings.local
+
+# Put db_data.json into backend/fixtures/
 
 # Load data
 cd backend

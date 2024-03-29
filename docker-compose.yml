@@ -1,0 +1,137 @@
+version: '3.9'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    hostname: backend
+    container_name: backend
+    restart: always
+    depends_on:
+      - db_postgres
+    command: >
+      /bin/bash -c "poetry run python manage.py migrate --noinput
+      && poetry run python manage.py shell < createsuperuser.py
+      && poetry run python manage.py loaddata db_data.json
+      && poetry run python manage.py collectstatic --noinput
+      && poetry run gunicorn backend.asgi:application --workers 1 --worker-class uvicorn.workers.UvicornWorker --bind 0.0.0.0:8000 --timeout 600"
+    expose:
+      - 8000
+    env_file:
+      - .env.prod
+    volumes:
+      - ./backend:/home/app
+      - static-volume:/home/app/staticfiles
+      - media-volume:/home/app/media
+    networks:
+      - shop-net
+
+  db_postgres:
+    image: postgres:16
+    shm_size: '1gb'
+    hostname: db_postgres
+    container_name: db_postgres
+    restart: on-failure
+    env_file:
+      - .env.prod
+    ports:
+      - '5433:5432'
+    volumes:
+      - db-postgres:/var/lib/postgresql/data
+      - ./scripts/create_databases.sql:/docker-entrypoint-initdb.d/create_databases.sql
+    networks:
+      - shop-net
+
+  rabbitmq:
+    image: rabbitmq:management
+    container_name: rabbitmq
+    env_file:
+      - .env.prod
+    ports:
+      - 5672:5672
+      - 15672:15672
+    networks:
+      - shop-net
+
+  redis:
+    image: redis:6.2-alpine
+    container_name: redis
+    restart: always
+    ports:
+      - '6379:6379'
+    command: 'redis-server --save 20 1 --loglevel warning'
+    volumes:
+      - redis:/data
+    networks:
+      - shop-net
+
+  celery:
+    build: ./backend
+    depends_on:
+      - db_postgres
+      - backend
+      - rabbitmq
+    container_name: celery
+    restart: unless-stopped
+    volumes:
+      - ./backend:/home/app
+    env_file:
+      - .env.prod
+    command: 'poetry run celery -A backend worker -l info'
+    networks:
+      - shop-net
+
+  # [400] POST http://backend:8000/payment/webhook/
+  stripe-cli:
+    image: stripe/stripe-cli:latest
+    container_name: stripe-cli
+    command: listen --api-key $${STRIPE_API_KEY} --device-name $${STRIPE_DEVICE_NAME} --forward-to backend:8000/payment/webhook/
+    depends_on:
+      - backend
+    env_file:
+      - .env.stripe
+    networks:
+      - shop-net
+
+  flower:
+    build: ./backend
+    depends_on:
+      - celery
+    container_name: flower
+    restart: always
+    ports:
+      - '5555:5555'
+    env_file:
+      - .env.prod
+    command: 'poetry run celery -A backend flower'
+    networks:
+      - shop-net
+
+  nginx:
+    image: nginx:1.25
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - static-volume:/home/static
+      - media-volume:/home/media
+    container_name: nginx
+    restart: on-failure
+    ports:
+      - '1337:80'
+    depends_on:
+      - backend
+      - flower
+    networks:
+      - shop-net
+
+volumes:
+  static-volume:
+  media-volume:
+  db-postgres:
+    driver: local
+  redis:
+    driver: local
+
+networks:
+  shop-net:
+    external: true

@@ -10,7 +10,7 @@ import stripe
 
 from orders.models import Order
 
-stripe.api_key = os.environ.get('STRIPE_SECRET_KEY')
+stripe.api_key = os.environ.get('STRIPE_API_KEY')
 stripe.api_version = os.environ.get('STRIPE_API_VERSION')
 
 RedirectOrResponse = Union[HttpResponseRedirect, HttpResponse]

@@ -1,0 +1,2255 @@
+[
+{
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$720000$FzJFP41yc1N2B6I0fNPi3H$ryfjq4pSgSk1iRSh3U0n26Q6r+GS01DIAxuj/+QG514=",
+        "last_login": "2024-03-27T09:41:54.559Z",
+        "is_superuser": true,
+        "username": "admin",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2024-03-19T10:05:34.294Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "mi6ffdkx4ymo6jz6354sdxu00de48ox9",
+    "fields": {
+        "session_data": ".eJxVjLEOgzAMRP_FM4pIqSFh7N5vQLbjFtoqqQJMiH8vVCyMd-_dLZBy0NwNAVqsCpA0f1P8R7slyhO0y1pAR_PUd_N4qGDh1DHJW-MOwoviMxlJccoDm10xBx3NPQX93A73dNDT2G9rrVkcYmW9Z69csa8oiCVCdurE27oUYkF0zeOK2GhAtjWqarDalBdYfydHRN4:1rpPnx:8Dog-tHTx5xuNN8N9EpZF7DdCGonZri1eTEueP0sHqE",
+        "expire_date": "2024-04-10T09:42:45.407Z"
+    }
+},
+{
+    "model": "shop.category",
+    "pk": 2,
+    "fields": {
+        "name": "Substances",
+        "slug": "substances"
+    }
+},
+{
+    "model": "shop.category",
+    "pk": 3,
+    "fields": {
+        "name": "Explosive Enterprises",
+        "slug": "explosive-enterprises"
+    }
+},
+{
+    "model": "shop.category",
+    "pk": 4,
+    "fields": {
+        "name": "Muggle Magic",
+        "slug": "muggle-magic"
+    }
+},
+{
+    "model": "shop.category",
+    "pk": 5,
+    "fields": {
+        "name": "Clothing and Footwear",
+        "slug": "clothing-and-footwear"
+    }
+},
+{
+    "model": "shop.category",
+    "pk": 6,
+    "fields": {
+        "name": "Potions",
+        "slug": "potions"
+    }
+},
+{
+    "model": "shop.category",
+    "pk": 8,
+    "fields": {
+        "name": "Disguise",
+        "slug": "disguise"
+    }
+},
+{
+    "model": "shop.category",
+    "pk": 9,
+    "fields": {
+        "name": "Sweets",
+        "slug": "sweets"
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 1,
+    "fields": {
+        "category": 9,
+        "name": "U-No-Poo",
+        "slug": "u-no-poo",
+        "image": "products/2024/03/19/u-no-poo.webp",
+        "description": "U-No-Poo is a product that causes constipation in the unknowing taker. The pills could be mashed up and mixed with food or drink.",
+        "price": "5.00",
+        "available": true,
+        "created": "2024-03-19T10:34:31.319Z",
+        "updated": "2024-03-25T14:15:45.699Z"
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 2,
+    "fields": {
+        "category": 2,
+        "name": "Weather in a Bottle",
+        "slug": "weather-in-a-bottle",
+        "image": "products/2024/03/22/weather_in_a_bottle.png",
+        "description": "Weather in a Bottle holds wind or water or some kind of weather that when unleashed would affect a small area around the bottle.",
+        "price": "10.50",
+        "available": true,
+        "created": "2024-03-22T10:35:59.239Z",
+        "updated": "2024-03-22T10:35:59.239Z"
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 3,
+    "fields": {
+        "category": 3,
+        "name": "Dungbomb",
+        "slug": "dungbomb",
+        "image": "products/2024/03/25/dungbomb.png",
+        "description": "A Dungbomb is a magical stink bomb that gives off a putrid odour. Dungbombs were invented in the 1800s by Alberic Grunnion. When handled, Dungbombs left a person's hands dirty.",
+        "price": "1.21",
+        "available": true,
+        "created": "2024-03-25T12:53:27.213Z",
+        "updated": "2024-03-25T12:53:27.213Z"
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 4,
+    "fields": {
+        "category": 3,
+        "name": "Weasleys' Wildfire Whiz-bangs",
+        "slug": "weasleys-wildfire-whiz-bangs",
+        "image": "products/2024/03/25/wildfire_whiz-bangs.JPG",
+        "description": "Weasleys' Wildfire Whiz-bangs are enchanted fireworks created by Fred and George Weasley. They are unstoppable fireworks that were charmed to explode when struck with the Stunning Spell, and to multiply by ten when hit with the Vanishing Spell.  They include shocking-pink Catherine wheels, fire-breathing dragons, sparklers that spell out profanity, rockets with long tails of silver stars and firecrackers. When any two types collided, they make new kinds such as flying silver and pink pigs.",
+        "price": "9.24",
+        "available": true,
+        "created": "2024-03-25T12:56:42.675Z",
+        "updated": "2024-03-25T12:56:42.675Z"
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 5,
+    "fields": {
+        "category": 3,
+        "name": "Demon Dung",
+        "slug": "demon-dung",
+        "image": "products/2024/03/25/demon_dung_crackers.png",
+        "description": "Demon Dung is a brand of fireworks from the Explosive Enterprises line by Weasleys' Wizard Wheezes. They emit a powerful stench when set off.",
+        "price": "11.26",
+        "available": true,
+        "created": "2024-03-25T13:01:03.605Z",
+        "updated": "2024-03-25T13:01:03.605Z"
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 6,
+    "fields": {
+        "category": 4,
+        "name": "Boxing telescope",
+        "slug": "boxing-telescope",
+        "image": "products/2024/03/25/boxing_telescope.webp",
+        "description": "Boxing telescope is magical joke product. When it is squeezed, a tiny fist on a spring erupts from its end and lands a punch, accompanied by a puff of black smoke and a loud bang. The purple bruise caused by the telescope does not fade by itself, and could not be healed with standard remedies such as could be found in The Healer's Helpmate. The only known means to remove was another Weasleys' Wizard Wheezes product, a bruise removal paste.",
+        "price": "3.80",
+        "available": true,
+        "created": "2024-03-25T13:06:31.499Z",
+        "updated": "2024-03-25T13:12:31.328Z"
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 7,
+    "fields": {
+        "category": 3,
+        "name": "Thor's Thunder Cracker",
+        "slug": "thors-thunder-cracker",
+        "image": "products/2024/03/25/thors_thunder_cracker.webp",
+        "description": "Thor's Thunder Cracker is a rocket from the Explosive Enterprises line by Weasleys' Wizard Wheezes.",
+        "price": "19.11",
+        "available": true,
+        "created": "2024-03-25T13:10:05.701Z",
+        "updated": "2024-03-25T13:10:05.701Z"
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 8,
+    "fields": {
+        "category": 5,
+        "name": "Sticky Trainers",
+        "slug": "sticky-trainers",
+        "image": "products/2024/03/25/sticky_trainers.webp",
+        "description": "Sticky Trainers are yellow trainers with suction cups attached to the soles. The wearer can use them to climb walls and presumably to walk across ceilings as well.",
+        "price": "6.50",
+        "available": true,
+        "created": "2024-03-25T13:14:15.169Z",
+        "updated": "2024-03-25T13:14:15.169Z"
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 9,
+    "fields": {
+        "category": 5,
+        "name": "Jinx-Off",
+        "slug": "jinx-off",
+        "image": "products/2024/03/25/jinx_off_package.webp",
+        "description": "Jinx-Off is a spell-protection kit which includes a hat, cloak, and gloves. All three items have to be worn together for maximum protection. Care should be taken to ensure the set is in perfect condition, as a damaged piece could interfere with the protection.",
+        "price": "33.25",
+        "available": true,
+        "created": "2024-03-25T13:17:57.015Z",
+        "updated": "2024-03-25T13:17:57.015Z"
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 10,
+    "fields": {
+        "category": 6,
+        "name": "WonderWitch",
+        "slug": "wonderwitch",
+        "image": "products/2024/03/25/wonder_witch.webp",
+        "description": "WonderWitch is a line of Weasleys' Wizard Wheezes products designed and marketed for witches. Every single one of the products were invented by Fred and George Weasley. WonderWitch products include a range of love potions that induced infatuation in the drinker for up to twenty-four hours, depending on the weight of the boy and attractiveness of the girl in question. WonderWitch can be sent in disguised as ordinary perfume or other such bottled products such as cough potions as a part of the mail order service.",
+        "price": "5.50",
+        "available": true,
+        "created": "2024-03-25T13:23:12.465Z",
+        "updated": "2024-03-25T13:23:12.465Z"
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 11,
+    "fields": {
+        "category": 3,
+        "name": "Diabolic Dare Devils",
+        "slug": "diabolic-dare-devils",
+        "image": "products/2024/03/25/diabolic_dare_devils.webp",
+        "description": "Diabolic Dare Devils are fireworks from the Explosive Enterprises line by Weasleys' Wizard Wheezes.",
+        "price": "6.24",
+        "available": true,
+        "created": "2024-03-25T13:25:09.274Z",
+        "updated": "2024-03-25T13:25:09.274Z"
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 12,
+    "fields": {
+        "category": 3,
+        "name": "Basic Blaze Box",
+        "slug": "basic-blaze-box",
+        "image": "products/2024/03/25/basic_blaze_box.webp",
+        "description": "Fred Weasley's Basic Blaze Box is a product from the Explosive Enterprises line by Weasleys' Wizard Wheezes. Fred Weasley came up with the idea for the Basic Blaze Box. It contains an assortment of magical fireworks such as whizz-bangs and whammy rockets.",
+        "price": "33.09",
+        "available": true,
+        "created": "2024-03-25T13:27:38.353Z",
+        "updated": "2024-03-25T13:27:38.353Z"
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 13,
+    "fields": {
+        "category": 3,
+        "name": "Bombtastic Bomb",
+        "slug": "bombtastic-bomb",
+        "image": "products/2024/03/25/bombtastic_bomb.webp",
+        "description": "Bombtastic Bombs, or Bombtastic Bubble Blasts, are explosives sold at Fred and George Weasley's shop in Diagon Alley, Weasleys' Wizard Wheezes.",
+        "price": "10.50",
+        "available": true,
+        "created": "2024-03-25T13:30:26.877Z",
+        "updated": "2024-03-25T13:30:26.877Z"
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 14,
+    "fields": {
+        "category": 3,
+        "name": "George's Compendium Box of Pyrotechtrix",
+        "slug": "georges-compendium-box-of-pyrotechtrix",
+        "image": "products/2024/03/25/georges_compendium_box_of_pyrotechtrix.webp",
+        "description": "George's Compendium Box of Pyrotechtrix is a variety pack containing different rockets from the Explosive Enterprises line by Weasleys' Wizard Wheezes. George Weasley came up with the idea of the Compendium Box of Pyrotechtrix.",
+        "price": "50.50",
+        "available": true,
+        "created": "2024-03-25T13:34:11.759Z",
+        "updated": "2024-03-25T13:34:11.759Z"
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 15,
+    "fields": {
+        "category": 4,
+        "name": "Screaming Yo-yo",
+        "slug": "screaming-yo-yo",
+        "image": "products/2024/03/25/Screaming_yo-yo.webp",
+        "description": "A Screaming Yo-yo is a magical toy that shrieks when a person plays with it.",
+        "price": "85.00",
+        "available": true,
+        "created": "2024-03-25T13:39:17.750Z",
+        "updated": "2024-03-25T14:16:25.775Z"
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 16,
+    "fields": {
+        "category": 3,
+        "name": "Peace Disturbers",
+        "slug": "peace-disturbers",
+        "image": "products/2024/03/25/peace_disturbers.webp",
+        "description": "Peace Disturbers are fireworks from the Explosive Enterprises line by Weasleys' Wizard Wheezes.",
+        "price": "20.11",
+        "available": true,
+        "created": "2024-03-25T13:42:26.583Z",
+        "updated": "2024-03-25T13:42:26.583Z"
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 17,
+    "fields": {
+        "category": 8,
+        "name": "Comb-a-Chameleon",
+        "slug": "comb-a-chameleon",
+        "image": "products/2024/03/25/comb_a_chameleon.webp",
+        "description": "Comb-a-Chameleon is a hairbrush that magically changes the user's hairstyle. It is made from pure Romanian celanese acetate and can be used by people of either gender or any age group.",
+        "price": "12.50",
+        "available": true,
+        "created": "2024-03-25T13:47:27.167Z",
+        "updated": "2024-03-25T13:47:27.167Z"
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 18,
+    "fields": {
+        "category": 3,
+        "name": "Bang Bang Boggart Banger",
+        "slug": "bang-bang-boggart-banger",
+        "image": "products/2024/03/25/bang_bang_bogart_banger.webp",
+        "description": "Bang Bang Boggart Banger is a rocket from the Explosive Enterprises line by Weasleys' Wizard Wheezes.",
+        "price": "23.03",
+        "available": true,
+        "created": "2024-03-25T13:49:58.973Z",
+        "updated": "2024-03-25T13:49:58.973Z"
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 19,
+    "fields": {
+        "category": 3,
+        "name": "Loonar Loop Luminators",
+        "slug": "loonar-loop-luminators",
+        "image": "products/2024/03/25/loonar_loop_luminator.webp",
+        "description": "Loonar Loop Luminators are fireworks from the Explosive Enterprises line by Weasleys' Wizard Wheezes.",
+        "price": "23.03",
+        "available": true,
+        "created": "2024-03-25T13:52:04.090Z",
+        "updated": "2024-03-25T13:52:04.090Z"
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 20,
+    "fields": {
+        "category": 3,
+        "name": "Silver Sparkling Snakes",
+        "slug": "silver-sparkling-snakes",
+        "image": "products/2024/03/25/silver_sparkling_snakes.webp",
+        "description": "Silver Sparkling Snakes are fireworks from the Explosive Enterprises line by Weasleys' Wizard Wheezes.",
+        "price": "10.25",
+        "available": true,
+        "created": "2024-03-25T13:54:34.219Z",
+        "updated": "2024-03-25T13:54:34.219Z"
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 21,
+    "fields": {
+        "category": 3,
+        "name": "Electric Shock Shake",
+        "slug": "electric-shock-shake",
+        "image": "products/2024/03/25/electric_shock_shake.webp",
+        "description": "Electric Shock Shake is one of the practical joke items and one of the Explosive Enterprises. It is a glove that was bewitched so when the wearer touches a person, it sends an electric shock on them. \r\nCrowd-pleasing concoctions! Warning: the product is not safe for use by pregnant witches.",
+        "price": "7.50",
+        "available": true,
+        "created": "2024-03-25T13:59:21.262Z",
+        "updated": "2024-03-25T13:59:21.262Z"
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 22,
+    "fields": {
+        "category": 3,
+        "name": "Feathery Flamingo Flame Fuzzer",
+        "slug": "feathery-flamingo-flame-fuzzer",
+        "image": "products/2024/03/25/feathery_flamingo_flame_fuzzer.webp",
+        "description": "Feathery Flamingo Flame Fuzzer is a rocket from the Explosive Enterprises line by Weasleys' Wizard Wheezes.",
+        "price": "23.03",
+        "available": true,
+        "created": "2024-03-25T14:02:22.496Z",
+        "updated": "2024-03-25T14:02:22.496Z"
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 23,
+    "fields": {
+        "category": 3,
+        "name": "Miraculous Mystic Mayhem Makers",
+        "slug": "miraculous-mystic-mayhem-makers",
+        "image": "products/2024/03/25/miraculous_mystic_mayhem_makers.webp",
+        "description": "Miraculous Mystic Mayhem Makers are fireworks from the Explosive Enterprises line by Weasleys' Wizard Wheezes.",
+        "price": "28.26",
+        "available": true,
+        "created": "2024-03-25T14:05:01.602Z",
+        "updated": "2024-03-25T14:05:01.602Z"
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 24,
+    "fields": {
+        "category": 9,
+        "name": "Skiving Snackbox",
+        "slug": "skiving-snackbox",
+        "image": "products/2024/03/25/skiving_snackbox.webp",
+        "description": "Skiving Snackboxes are a range of sweets that made the consumer appear ill. The user develops various symptoms depending on the type of snackbox eaten. The main purpose of skiving snackboxes is to enable students to get out of undesirable lessons, and most types came in doubled-ended, colour-coded parts: one half that would cause the malady and one that would cure the pupil once they had left class.",
+        "price": "3.50",
+        "available": true,
+        "created": "2024-03-25T14:10:04.915Z",
+        "updated": "2024-03-25T14:10:04.915Z"
+    }
+},
+{
+    "model": "coupons.coupon",
+    "pk": 1,
+    "fields": {
+        "code": "SPRING",
+        "valid_from": "2024-03-25T10:20:39Z",
+        "valid_to": "2024-04-25T10:20:52Z",
+        "discount": 10,
+        "active": true
+    }
+},
+{
+    "model": "orders.order",
+    "pk": 50,
+    "fields": {
+        "first_name": "Julia",
+        "last_name": "Kuznetsova",
+        "email": "jukuznetswork@gmail.com",
+        "address": "Sosnovy Bor",
+        "postal_code": "241047",
+        "city": "Bryansk",
+        "created": "2024-03-26T11:58:51.640Z",
+        "updated": "2024-03-26T11:59:55.293Z",
+        "paid": true,
+        "stripe_id": "pi_3OyYfTBJCCeZfgmf1YrhSnTB",
+        "coupon": 1,
+        "discount": 10
+    }
+},
+{
+    "model": "orders.order",
+    "pk": 51,
+    "fields": {
+        "first_name": "Julia",
+        "last_name": "Kuznetsova",
+        "email": "jukuznetswork@gmail.com",
+        "address": "Sosnovy Bor",
+        "postal_code": "241047",
+        "city": "Bryansk",
+        "created": "2024-03-26T12:08:39.347Z",
+        "updated": "2024-03-26T12:09:42.351Z",
+        "paid": true,
+        "stripe_id": "pi_3OyYoxBJCCeZfgmf1cugXyVY",
+        "coupon": 1,
+        "discount": 10
+    }
+},
+{
+    "model": "orders.order",
+    "pk": 52,
+    "fields": {
+        "first_name": "Julia",
+        "last_name": "Kuznetsova",
+        "email": "jukuznetswork@gmail.com",
+        "address": "Sosnovy Bor",
+        "postal_code": "241047",
+        "city": "Bryansk",
+        "created": "2024-03-27T09:34:28.230Z",
+        "updated": "2024-03-27T09:35:09.329Z",
+        "paid": true,
+        "stripe_id": "pi_3OyssvBJCCeZfgmf1LUZJb2g",
+        "coupon": null,
+        "discount": 0
+    }
+},
+{
+    "model": "orders.order",
+    "pk": 53,
+    "fields": {
+        "first_name": "Julia",
+        "last_name": "Kuznetsova",
+        "email": "jukuznetswork@gmail.com",
+        "address": "Sosnovy Bor",
+        "postal_code": "241047",
+        "city": "Bryansk",
+        "created": "2024-03-27T09:40:56.873Z",
+        "updated": "2024-03-27T09:41:29.335Z",
+        "paid": true,
+        "stripe_id": "pi_3Oysz3BJCCeZfgmf0MCS8DK6",
+        "coupon": 1,
+        "discount": 10
+    }
+},
+{
+    "model": "orders.orderitem",
+    "pk": 52,
+    "fields": {
+        "order": 50,
+        "product": 3,
+        "price": "1.21",
+        "quantity": 1
+    }
+},
+{
+    "model": "orders.orderitem",
+    "pk": 53,
+    "fields": {
+        "order": 50,
+        "product": 24,
+        "price": "3.50",
+        "quantity": 2
+    }
+},
+{
+    "model": "orders.orderitem",
+    "pk": 54,
+    "fields": {
+        "order": 50,
+        "product": 1,
+        "price": "5.00",
+        "quantity": 10
+    }
+},
+{
+    "model": "orders.orderitem",
+    "pk": 55,
+    "fields": {
+        "order": 51,
+        "product": 24,
+        "price": "3.50",
+        "quantity": 1
+    }
+},
+{
+    "model": "orders.orderitem",
+    "pk": 56,
+    "fields": {
+        "order": 51,
+        "product": 3,
+        "price": "1.21",
+        "quantity": 1
+    }
+},
+{
+    "model": "orders.orderitem",
+    "pk": 57,
+    "fields": {
+        "order": 52,
+        "product": 18,
+        "price": "23.03",
+        "quantity": 1
+    }
+},
+{
+    "model": "orders.orderitem",
+    "pk": 58,
+    "fields": {
+        "order": 52,
+        "product": 24,
+        "price": "3.50",
+        "quantity": 1
+    }
+},
+{
+    "model": "orders.orderitem",
+    "pk": 59,
+    "fields": {
+        "order": 53,
+        "product": 3,
+        "price": "1.21",
+        "quantity": 2
+    }
+},
+{
+    "model": "orders.orderitem",
+    "pk": 60,
+    "fields": {
+        "order": 53,
+        "product": 24,
+        "price": "3.50",
+        "quantity": 1
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+        "action_time": "2024-03-19T10:32:59.342Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "category"
+        ],
+        "object_id": "1",
+        "object_repr": "Drugs",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+        "action_time": "2024-03-19T10:34:31.362Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "product"
+        ],
+        "object_id": "1",
+        "object_repr": "U-No-Poo",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+        "action_time": "2024-03-19T12:54:58.990Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "product"
+        ],
+        "object_id": "1",
+        "object_repr": "U-No-Poo",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+        "action_time": "2024-03-22T10:33:00.124Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "category"
+        ],
+        "object_id": "2",
+        "object_repr": "Substances",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+        "action_time": "2024-03-22T10:35:59.303Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "product"
+        ],
+        "object_id": "2",
+        "object_repr": "Weather in a Bottle",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+        "action_time": "2024-03-25T10:21:07.683Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "coupons",
+            "coupon"
+        ],
+        "object_id": "1",
+        "object_repr": "SPRING",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+        "action_time": "2024-03-25T12:49:50.306Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "category"
+        ],
+        "object_id": "3",
+        "object_repr": "Explosives",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+        "action_time": "2024-03-25T12:53:27.248Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "product"
+        ],
+        "object_id": "3",
+        "object_repr": "Dungbomb",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+        "action_time": "2024-03-25T12:56:42.705Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "product"
+        ],
+        "object_id": "4",
+        "object_repr": "Weasleys' Wildfire Whiz-bangs",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+        "action_time": "2024-03-25T12:57:31.287Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "category"
+        ],
+        "object_id": "3",
+        "object_repr": "Explosive Enterprises",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Name\", \"Slug\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+        "action_time": "2024-03-25T13:01:03.636Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "product"
+        ],
+        "object_id": "5",
+        "object_repr": "Demon Dung",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+        "action_time": "2024-03-25T13:03:01.142Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "category"
+        ],
+        "object_id": "4",
+        "object_repr": "Gadgets",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+        "action_time": "2024-03-25T13:06:31.534Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "product"
+        ],
+        "object_id": "6",
+        "object_repr": "Boxing telescope",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+        "action_time": "2024-03-25T13:10:05.725Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "product"
+        ],
+        "object_id": "7",
+        "object_repr": "Thor's Thunder Cracker",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+        "action_time": "2024-03-25T13:12:31.353Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "product"
+        ],
+        "object_id": "6",
+        "object_repr": "Boxing telescope",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Price\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+        "action_time": "2024-03-25T13:13:17.749Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "category"
+        ],
+        "object_id": "5",
+        "object_repr": "Clothing and Footwear",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+        "action_time": "2024-03-25T13:14:15.186Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "product"
+        ],
+        "object_id": "8",
+        "object_repr": "Sticky Trainers",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+        "action_time": "2024-03-25T13:17:57.035Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "product"
+        ],
+        "object_id": "9",
+        "object_repr": "Jinx-Off",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+        "action_time": "2024-03-25T13:19:39.837Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "category"
+        ],
+        "object_id": "6",
+        "object_repr": "Potions",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 20,
+    "fields": {
+        "action_time": "2024-03-25T13:23:12.494Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "product"
+        ],
+        "object_id": "10",
+        "object_repr": "WonderWitch",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 21,
+    "fields": {
+        "action_time": "2024-03-25T13:25:09.301Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "product"
+        ],
+        "object_id": "11",
+        "object_repr": "Diabolic Dare Devils",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 22,
+    "fields": {
+        "action_time": "2024-03-25T13:27:38.370Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "product"
+        ],
+        "object_id": "12",
+        "object_repr": "Basic Blaze Box",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 23,
+    "fields": {
+        "action_time": "2024-03-25T13:30:27.304Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "product"
+        ],
+        "object_id": "13",
+        "object_repr": "Bombtastic Bomb",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 24,
+    "fields": {
+        "action_time": "2024-03-25T13:34:11.783Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "product"
+        ],
+        "object_id": "14",
+        "object_repr": "George's Compendium Box of Pyrotechtrix",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 25,
+    "fields": {
+        "action_time": "2024-03-25T13:35:16.605Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "category"
+        ],
+        "object_id": "7",
+        "object_repr": "Toys",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 26,
+    "fields": {
+        "action_time": "2024-03-25T13:39:17.775Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "product"
+        ],
+        "object_id": "15",
+        "object_repr": "Screaming Yo-yo",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 27,
+    "fields": {
+        "action_time": "2024-03-25T13:42:26.613Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "product"
+        ],
+        "object_id": "16",
+        "object_repr": "Peace Disturbers",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 28,
+    "fields": {
+        "action_time": "2024-03-25T13:45:59.551Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "category"
+        ],
+        "object_id": "8",
+        "object_repr": "Disguise",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 29,
+    "fields": {
+        "action_time": "2024-03-25T13:47:27.192Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "product"
+        ],
+        "object_id": "17",
+        "object_repr": "Comb-a-Chameleon",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 30,
+    "fields": {
+        "action_time": "2024-03-25T13:49:59.016Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "product"
+        ],
+        "object_id": "18",
+        "object_repr": "Bang Bang Boggart Banger",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 31,
+    "fields": {
+        "action_time": "2024-03-25T13:52:04.119Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "product"
+        ],
+        "object_id": "19",
+        "object_repr": "Loonar Loop Luminators",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 32,
+    "fields": {
+        "action_time": "2024-03-25T13:54:34.237Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "product"
+        ],
+        "object_id": "20",
+        "object_repr": "Silver Sparkling Snakes",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 33,
+    "fields": {
+        "action_time": "2024-03-25T13:59:21.324Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "product"
+        ],
+        "object_id": "21",
+        "object_repr": "Electric Shock Shake",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 34,
+    "fields": {
+        "action_time": "2024-03-25T14:02:22.523Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "product"
+        ],
+        "object_id": "22",
+        "object_repr": "Feathery Flamingo Flame Fuzzer",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 35,
+    "fields": {
+        "action_time": "2024-03-25T14:05:01.637Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "product"
+        ],
+        "object_id": "23",
+        "object_repr": "Miraculous Mystic Mayhem Makers",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 36,
+    "fields": {
+        "action_time": "2024-03-25T14:07:40.819Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "category"
+        ],
+        "object_id": "9",
+        "object_repr": "Sweets",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 37,
+    "fields": {
+        "action_time": "2024-03-25T14:10:04.958Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "product"
+        ],
+        "object_id": "24",
+        "object_repr": "Skiving Snackbox",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 38,
+    "fields": {
+        "action_time": "2024-03-25T14:11:19.699Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "category"
+        ],
+        "object_id": "4",
+        "object_repr": "Muggle Magic",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Name\", \"Slug\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 39,
+    "fields": {
+        "action_time": "2024-03-25T14:15:45.711Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "product"
+        ],
+        "object_id": "1",
+        "object_repr": "U-No-Poo",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 40,
+    "fields": {
+        "action_time": "2024-03-25T14:16:01.086Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "category"
+        ],
+        "object_id": "1",
+        "object_repr": "Drugs",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 41,
+    "fields": {
+        "action_time": "2024-03-25T14:16:25.779Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "product"
+        ],
+        "object_id": "15",
+        "object_repr": "Screaming Yo-yo",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 42,
+    "fields": {
+        "action_time": "2024-03-25T14:16:34.429Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "category"
+        ],
+        "object_id": "7",
+        "object_repr": "Toys",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 43,
+    "fields": {
+        "action_time": "2024-03-26T10:50:51.170Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "orders",
+            "order"
+        ],
+        "object_id": "49",
+        "object_repr": "Order 49",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 44,
+    "fields": {
+        "action_time": "2024-03-26T10:50:51.213Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "orders",
+            "order"
+        ],
+        "object_id": "48",
+        "object_repr": "Order 48",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 45,
+    "fields": {
+        "action_time": "2024-03-26T10:50:51.214Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "orders",
+            "order"
+        ],
+        "object_id": "47",
+        "object_repr": "Order 47",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 46,
+    "fields": {
+        "action_time": "2024-03-26T10:50:51.217Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "orders",
+            "order"
+        ],
+        "object_id": "46",
+        "object_repr": "Order 46",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 47,
+    "fields": {
+        "action_time": "2024-03-26T10:50:51.221Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "orders",
+            "order"
+        ],
+        "object_id": "45",
+        "object_repr": "Order 45",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 48,
+    "fields": {
+        "action_time": "2024-03-26T10:50:51.223Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "orders",
+            "order"
+        ],
+        "object_id": "44",
+        "object_repr": "Order 44",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 49,
+    "fields": {
+        "action_time": "2024-03-26T10:50:51.226Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "orders",
+            "order"
+        ],
+        "object_id": "43",
+        "object_repr": "Order 43",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 50,
+    "fields": {
+        "action_time": "2024-03-26T10:50:51.228Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "orders",
+            "order"
+        ],
+        "object_id": "42",
+        "object_repr": "Order 42",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 51,
+    "fields": {
+        "action_time": "2024-03-26T10:50:51.230Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "orders",
+            "order"
+        ],
+        "object_id": "41",
+        "object_repr": "Order 41",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 52,
+    "fields": {
+        "action_time": "2024-03-26T10:50:51.234Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "orders",
+            "order"
+        ],
+        "object_id": "40",
+        "object_repr": "Order 40",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 53,
+    "fields": {
+        "action_time": "2024-03-26T10:50:51.236Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "orders",
+            "order"
+        ],
+        "object_id": "39",
+        "object_repr": "Order 39",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 54,
+    "fields": {
+        "action_time": "2024-03-26T10:50:51.238Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "orders",
+            "order"
+        ],
+        "object_id": "38",
+        "object_repr": "Order 38",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 55,
+    "fields": {
+        "action_time": "2024-03-26T10:50:51.240Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "orders",
+            "order"
+        ],
+        "object_id": "37",
+        "object_repr": "Order 37",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 56,
+    "fields": {
+        "action_time": "2024-03-26T10:50:51.241Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "orders",
+            "order"
+        ],
+        "object_id": "36",
+        "object_repr": "Order 36",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 57,
+    "fields": {
+        "action_time": "2024-03-26T10:50:51.243Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "orders",
+            "order"
+        ],
+        "object_id": "35",
+        "object_repr": "Order 35",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 58,
+    "fields": {
+        "action_time": "2024-03-26T10:50:51.245Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "orders",
+            "order"
+        ],
+        "object_id": "34",
+        "object_repr": "Order 34",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 59,
+    "fields": {
+        "action_time": "2024-03-26T10:50:51.246Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "orders",
+            "order"
+        ],
+        "object_id": "33",
+        "object_repr": "Order 33",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 60,
+    "fields": {
+        "action_time": "2024-03-26T10:50:51.249Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "orders",
+            "order"
+        ],
+        "object_id": "32",
+        "object_repr": "Order 32",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 61,
+    "fields": {
+        "action_time": "2024-03-26T10:50:51.252Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "orders",
+            "order"
+        ],
+        "object_id": "31",
+        "object_repr": "Order 31",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 62,
+    "fields": {
+        "action_time": "2024-03-26T10:50:51.254Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "orders",
+            "order"
+        ],
+        "object_id": "30",
+        "object_repr": "Order 30",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 63,
+    "fields": {
+        "action_time": "2024-03-26T10:50:51.256Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "orders",
+            "order"
+        ],
+        "object_id": "29",
+        "object_repr": "Order 29",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 64,
+    "fields": {
+        "action_time": "2024-03-26T10:50:51.257Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "orders",
+            "order"
+        ],
+        "object_id": "28",
+        "object_repr": "Order 28",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 65,
+    "fields": {
+        "action_time": "2024-03-26T10:50:51.259Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "orders",
+            "order"
+        ],
+        "object_id": "27",
+        "object_repr": "Order 27",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 66,
+    "fields": {
+        "action_time": "2024-03-26T10:50:51.260Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "orders",
+            "order"
+        ],
+        "object_id": "26",
+        "object_repr": "Order 26",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 67,
+    "fields": {
+        "action_time": "2024-03-26T10:50:51.262Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "orders",
+            "order"
+        ],
+        "object_id": "25",
+        "object_repr": "Order 25",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 68,
+    "fields": {
+        "action_time": "2024-03-26T10:50:51.265Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "orders",
+            "order"
+        ],
+        "object_id": "24",
+        "object_repr": "Order 24",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 69,
+    "fields": {
+        "action_time": "2024-03-26T10:50:51.267Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "orders",
+            "order"
+        ],
+        "object_id": "23",
+        "object_repr": "Order 23",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 70,
+    "fields": {
+        "action_time": "2024-03-26T10:50:51.269Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "orders",
+            "order"
+        ],
+        "object_id": "22",
+        "object_repr": "Order 22",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 71,
+    "fields": {
+        "action_time": "2024-03-26T10:50:51.271Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "orders",
+            "order"
+        ],
+        "object_id": "21",
+        "object_repr": "Order 21",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 72,
+    "fields": {
+        "action_time": "2024-03-26T10:50:51.273Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "orders",
+            "order"
+        ],
+        "object_id": "20",
+        "object_repr": "Order 20",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 73,
+    "fields": {
+        "action_time": "2024-03-26T10:50:51.276Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "orders",
+            "order"
+        ],
+        "object_id": "19",
+        "object_repr": "Order 19",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 74,
+    "fields": {
+        "action_time": "2024-03-26T10:50:51.278Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "orders",
+            "order"
+        ],
+        "object_id": "18",
+        "object_repr": "Order 18",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 75,
+    "fields": {
+        "action_time": "2024-03-26T10:50:51.280Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "orders",
+            "order"
+        ],
+        "object_id": "17",
+        "object_repr": "Order 17",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 76,
+    "fields": {
+        "action_time": "2024-03-26T10:50:51.283Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "orders",
+            "order"
+        ],
+        "object_id": "16",
+        "object_repr": "Order 16",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 77,
+    "fields": {
+        "action_time": "2024-03-26T10:50:51.286Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "orders",
+            "order"
+        ],
+        "object_id": "15",
+        "object_repr": "Order 15",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 78,
+    "fields": {
+        "action_time": "2024-03-26T10:50:51.289Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "orders",
+            "order"
+        ],
+        "object_id": "14",
+        "object_repr": "Order 14",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 79,
+    "fields": {
+        "action_time": "2024-03-26T10:50:51.292Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "orders",
+            "order"
+        ],
+        "object_id": "13",
+        "object_repr": "Order 13",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 80,
+    "fields": {
+        "action_time": "2024-03-26T10:50:51.294Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "orders",
+            "order"
+        ],
+        "object_id": "12",
+        "object_repr": "Order 12",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 81,
+    "fields": {
+        "action_time": "2024-03-26T10:50:51.296Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "orders",
+            "order"
+        ],
+        "object_id": "11",
+        "object_repr": "Order 11",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 82,
+    "fields": {
+        "action_time": "2024-03-26T10:50:51.298Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "orders",
+            "order"
+        ],
+        "object_id": "10",
+        "object_repr": "Order 10",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 83,
+    "fields": {
+        "action_time": "2024-03-26T10:50:51.299Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "orders",
+            "order"
+        ],
+        "object_id": "9",
+        "object_repr": "Order 9",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 84,
+    "fields": {
+        "action_time": "2024-03-26T10:50:51.301Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "orders",
+            "order"
+        ],
+        "object_id": "8",
+        "object_repr": "Order 8",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 85,
+    "fields": {
+        "action_time": "2024-03-26T10:50:51.303Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "orders",
+            "order"
+        ],
+        "object_id": "7",
+        "object_repr": "Order 7",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 86,
+    "fields": {
+        "action_time": "2024-03-26T10:50:51.305Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "orders",
+            "order"
+        ],
+        "object_id": "6",
+        "object_repr": "Order 6",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 87,
+    "fields": {
+        "action_time": "2024-03-26T10:50:51.306Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "orders",
+            "order"
+        ],
+        "object_id": "5",
+        "object_repr": "Order 5",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 88,
+    "fields": {
+        "action_time": "2024-03-26T10:50:51.308Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "orders",
+            "order"
+        ],
+        "object_id": "4",
+        "object_repr": "Order 4",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 89,
+    "fields": {
+        "action_time": "2024-03-26T10:50:51.310Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "orders",
+            "order"
+        ],
+        "object_id": "3",
+        "object_repr": "Order 3",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 90,
+    "fields": {
+        "action_time": "2024-03-26T10:50:51.311Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "orders",
+            "order"
+        ],
+        "object_id": "2",
+        "object_repr": "Order 2",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 91,
+    "fields": {
+        "action_time": "2024-03-26T10:50:51.313Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "orders",
+            "order"
+        ],
+        "object_id": "1",
+        "object_repr": "Order 1",
+        "action_flag": 3,
+        "change_message": ""
+    }
+}
+]

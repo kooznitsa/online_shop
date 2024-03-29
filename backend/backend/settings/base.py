@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'host.docker.internal']
 
 
 # Application definition
@@ -112,6 +112,7 @@ CORS_ALLOW_ALL_ORIGINS = True
 
 CSRF_TRUSTED_ORIGINS = [
     'http://127.0.0.1:8000',
+    'http://127.0.0.1:1337',
 ]
 CSRF_COOKIE_SECURE = False
 
@@ -223,6 +224,6 @@ CART_SESSION_ID = 'cart'
 # Stripe payment system
 
 STRIPE_PUBLISHABLE_KEY = os.environ.get('STRIPE_PUBLISHABLE_KEY')
-STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY')
+STRIPE_API_KEY = os.environ.get('STRIPE_SECRET_KEY')
 STRIPE_API_VERSION = '2023-10-16'
 STRIPE_WEBHOOK_SECRET = os.environ.get('STRIPE_WEBHOOK_SECRET')
